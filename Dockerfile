@@ -2,7 +2,11 @@ FROM ubuntu:14.04
 MAINTAINER Brad Parker <brad@parker1723.com>
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql  php5-ldap unzip
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install curl mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql  php5-ldap unzip
+
+# grab and install nodejs v9
+RUN curl --silent --location https://deb.nodesource.com/setup_9.x | sudo bash -
+RUN apt-get install -y nodejs build-essential
 
 # setup hackazon
 RUN easy_install supervisor
@@ -30,5 +34,10 @@ RUN chmod 755 /etc/apache2/foreground.sh
 RUN a2enmod rewrite 
 RUN mkdir /var/log/supervisor/
 
-EXPOSE 80
+# setup node
+ADD ./nodejs /var/express
+WORKDIR /var/express
+RUN npm install --production
+
+EXPOSE 8080
 CMD ["/bin/bash", "/start.sh"]
