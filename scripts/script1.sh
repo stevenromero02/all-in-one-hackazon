@@ -1,6 +1,4 @@
-#------------
-#!/bin/bash
-# 
+#!/bin/bash 
 
 if [ SECRET = 1 ]
 then
