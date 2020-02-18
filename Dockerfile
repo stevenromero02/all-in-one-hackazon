@@ -28,7 +28,7 @@ RUN chown -R www-data:www-data /var/www/hackazon/web/products_pictures/
 RUN chown -R www-data:www-data /var/www/hackazon/web/upload
 RUN chown -R www-data:www-data /var/www/hackazon/assets/config
 RUN chmod 755 /start.sh
-RUN chmod 755 /start1.sh
+RUN chmod 755 /script1.sh
 RUN chmod 755 /restart_services.sh
 RUN chmod 755 /etc/apache2/foreground.sh
 RUN a2enmod rewrite 
