@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server 
 # setup hackazon
 RUN easy_install supervisor
 ADD ./scripts/start.sh /start.sh
-ADD ./scripts/start1.sh /start1.sh
+ADD ./scripts/script1.sh /script1.sh
 ADD ./scripts/restart_services.sh /restart_services.sh
 ADD ./scripts/passwordHash.php /passwordHash.php
 ADD ./scripts/foreground.sh /etc/apache2/foreground.sh
