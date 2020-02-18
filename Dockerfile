@@ -7,6 +7,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server 
 # setup hackazon
 RUN easy_install supervisor
 ADD ./scripts/start.sh /start.sh
+ADD ./scripts/start1.sh /start1.sh
+ADD ./scripts/restart_services.sh /restart_services.sh
 ADD ./scripts/passwordHash.php /passwordHash.php
 ADD ./scripts/foreground.sh /etc/apache2/foreground.sh
 ADD ./configs/supervisord.conf /etc/supervisord.conf
@@ -26,9 +28,11 @@ RUN chown -R www-data:www-data /var/www/hackazon/web/products_pictures/
 RUN chown -R www-data:www-data /var/www/hackazon/web/upload
 RUN chown -R www-data:www-data /var/www/hackazon/assets/config
 RUN chmod 755 /start.sh
+RUN chmod 755 /start1.sh
+RUN chmod 755 /restart_services.sh
 RUN chmod 755 /etc/apache2/foreground.sh
 RUN a2enmod rewrite 
 RUN mkdir /var/log/supervisor/
 
-EXPOSE 80
+EXPOSE 80 443
 CMD ["/bin/bash", "/start.sh"]
