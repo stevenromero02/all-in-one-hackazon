@@ -1,25 +1,24 @@
 #!/bin/bash
 # 
 
-SECRET2_VALUE = RAND_INT
-echo SECRET2_VALUE
+SECRET2_VALUE=RAND_INT
 
-if [ SECRET2_VALUE = 1 ]
+if [ SECRET2_VALUE=1 ]
 then
-cp /vunerabilities/VULNERABILITIESv1.md /var/www/hackazon/VULNERABILITIES.md
+	cp /vunerabilities/VULNERABILITIESv1.md /var/www/hackazon/VULNERABILITIES.md
 fi
 
-if [ SECRET2_VALUE = 2 ]
+if [ SECRET2_VALUE=2 ]
 then
-cp /vunerabilities/VULNERABILITIESv2.md /var/www/hackazon/VULNERABILITIES.md
+	cp /vunerabilities/VULNERABILITIESv2.md /var/www/hackazon/VULNERABILITIES.md
 fi
 
-if [ SECRET2_VALUE = 3 ]
+if [ SECRET2_VALUE=3 ]
 then
-cp /vunerabilities/VULNERABILITIESv3.md /var/www/hackazon/VULNERABILITIES.md
+	cp /vunerabilities/VULNERABILITIESv3.md /var/www/hackazon/VULNERABILITIES.md
 fi
 
-if [ SECRET2_VALUE = 4 ]
+if [ SECRET2_VALUE=4 ]
 then
-cp /vunerabilities/VULNERABILITIESv4.md /var/www/hackazon/VULNERABILITIES.md
+	cp /vunerabilities/VULNERABILITIESv4.md /var/www/hackazon/VULNERABILITIES.md
 fi
