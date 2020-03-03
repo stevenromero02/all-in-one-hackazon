@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server 
 RUN easy_install supervisor
 ADD ./scripts/start.sh /start.sh
 ADD ./scripts/xss_configuration.sh /xss_configuration.sh
-ADD ./vulnerabilities/xss_VULNERABILITIES.md /vulnerabilities/VULNERABILITIES.md
+ADD ./vulnerabilities/xss_VULNERABILITIES.md /vulnerabilities/xss_VULNERABILITIES.md
 ADD ./vulnerabilities/xss_accountv1.php /vulnerabilities/xss_accountv1.php
 ADD ./vulnerabilities/xss_accountv2.php /vulnerabilities/xss_accountv2.php
 ADD ./vulnerabilities/xss_accountv3.php /vulnerabilities/xss_accountv3.php
