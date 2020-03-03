@@ -6,8 +6,37 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server 
 # setup hackazon
 RUN easy_install supervisor
 ADD ./scripts/start.sh /start.sh
-ADD ./scripts/script1.sh /script1.sh
+ADD ./scripts/xss_configuration.sh /xss_configuration.sh
 ADD ./vulnerabilities/xss_VULNERABILITIES.md /vulnerabilities/VULNERABILITIES.md
+ADD ./vulnerabilities/xss_accountv1.php /vulnerabilities/xss_accountv1.php
+ADD ./vulnerabilities/xss_accountv2.php /vulnerabilities/xss_accountv2.php
+ADD ./vulnerabilities/xss_accountv3.php /vulnerabilities/xss_accountv3.php
+ADD ./vulnerabilities/xss_accountv4.php /vulnerabilities/xss_accountv4.php
+ADD ./vulnerabilities/xss_accountv5.php /vulnerabilities/xss_accountv5.php
+ADD ./vulnerabilities/xss_amfv1.php /vulnerabilities/xss_amfv1.php
+ADD ./vulnerabilities/xss_amfv2.php	/vulnerabilities/xss_amfv2.php
+ADD ./vulnerabilities/xss_cartv1.php /vulnerabilities/xss_cartv1.php
+ADD ./vulnerabilities/xss_cartv2.php /vulnerabilities/xss_cartv2.php
+ADD ./vulnerabilities/xss_cartv3.php /vulnerabilities/xss_cartv3.php
+ADD ./vulnerabilities/xss_checkoutv1.php /vulnerabilities/xss_checkoutv1.php
+ADD ./vulnerabilities/xss_checkoutv2.php /vulnerabilities/xss_checkoutv2.php
+ADD ./vulnerabilities/xss_checkoutv3.php /vulnerabilities/xss_checkoutv3.php
+ADD ./vulnerabilities/xss_checkoutv4.php /vulnerabilities/xss_checkoutv4.php
+ADD ./vulnerabilities/xss_contactv1.php /vulnerabilities/xss_contactv1.php
+ADD ./vulnerabilities/xss_contactv2.php	/vulnerabilities/xss_contactv2.php
+ADD ./vulnerabilities/xss_contactv3.php	/vulnerabilities/xss_contactv3.php
+ADD ./vulnerabilities/xss_contactv4.php /vulnerabilities/xss_contactv4.php
+ADD ./vulnerabilities/xss_faqv1.php	/vulnerabilities/xss_faqv1.php
+ADD ./vulnerabilities/xss_faqv2.php	/vulnerabilities/xss_faqv2.php
+ADD ./vulnerabilities/xss_faqv3.php	/vulnerabilities/xss_faqv3.php
+ADD ./vulnerabilities/xss_searchv1.php, vulnerabilities/xss_searchv1.php
+ADD ./vulnerabilities/xss_searchv2.php /vulnerabilities/xss_searchv2.php
+ADD ./vulnerabilities/xss_userv1.php /vulnerabilities/xss_userv1.php
+ADD ./vulnerabilities/xss_userv2.php /vulnerabilities/xss_userv2.php
+ADD ./vulnerabilities/xss_userv3.php /vulnerabilities/xss_userv3.php
+ADD ./vulnerabilities/xss_wishlistv1.php /vulnerabilities/xss_wishlistv1.php
+ADD ./vulnerabilities/xss_wishlistv2.php /vulnerabilities/xss_wishlistv2.php
+ADD ./vulnerabilities/xss_wishlistv3.php /vulnerabilities/xss_wishlistv3.php
 ADD ./scripts/restart_services.sh /restart_services.sh
 ADD ./scripts/passwordHash.php /passwordHash.php
 ADD ./scripts/foreground.sh /etc/apache2/foreground.sh
@@ -28,7 +57,7 @@ RUN chown -R www-data:www-data /var/www/hackazon/web/products_pictures/
 RUN chown -R www-data:www-data /var/www/hackazon/web/upload
 RUN chown -R www-data:www-data /var/www/hackazon/assets/config
 RUN chmod 755 /start.sh
-RUN chmod 755 /script1.sh
+RUN chmod 755 /xss_configuration.sh
 RUN chmod 755 /restart_services.sh
 RUN chmod 755 /etc/apache2/foreground.sh
 RUN a2enmod rewrite 
