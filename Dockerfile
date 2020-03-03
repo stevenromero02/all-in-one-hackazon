@@ -60,7 +60,6 @@ RUN chmod 755 /start.sh
 RUN chmod 755 /xss_configuration.sh
 RUN chmod 755 /restart_services.sh
 RUN chmod 755 /etc/apache2/foreground.sh
-RUN cp /xss_configuration.sh /home/ubuntu/xss_configuration.sh
 RUN a2enmod rewrite 
 RUN mkdir /var/log/supervisor/
 
