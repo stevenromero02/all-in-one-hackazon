@@ -29,7 +29,7 @@ ADD ./vulnerabilities/xss_contactv4.php /vulnerabilities/xss_contactv4.php
 ADD ./vulnerabilities/xss_faqv1.php	/vulnerabilities/xss_faqv1.php
 ADD ./vulnerabilities/xss_faqv2.php	/vulnerabilities/xss_faqv2.php
 ADD ./vulnerabilities/xss_faqv3.php	/vulnerabilities/xss_faqv3.php
-ADD ./vulnerabilities/xss_searchv1.php, vulnerabilities/xss_searchv1.php
+ADD ./vulnerabilities/xss_searchv1.php /vulnerabilities/xss_searchv1.php
 ADD ./vulnerabilities/xss_searchv2.php /vulnerabilities/xss_searchv2.php
 ADD ./vulnerabilities/xss_userv1.php /vulnerabilities/xss_userv1.php
 ADD ./vulnerabilities/xss_userv2.php /vulnerabilities/xss_userv2.php
@@ -60,6 +60,7 @@ RUN chmod 755 /start.sh
 RUN chmod 755 /xss_configuration.sh
 RUN chmod 755 /restart_services.sh
 RUN chmod 755 /etc/apache2/foreground.sh
+RUN cp /xss_configuration.sh /home/ubuntu/xss_configuration.sh
 RUN a2enmod rewrite 
 RUN mkdir /var/log/supervisor/
 
