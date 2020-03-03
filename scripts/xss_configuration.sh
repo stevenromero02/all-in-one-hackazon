@@ -3,7 +3,7 @@
 
 SECRET2_VALUE=RAND_INT
 
-cp /vunerabilities/xss_VULNERABILITIESv1.md /var/www/hackazon/VULNERABILITIES.md
+cp /vunerabilities/xss_VULNERABILITIES.md /var/www/hackazon/VULNERABILITIES.md
 
 if [ SECRET2_VALUE=1 ]
 then
