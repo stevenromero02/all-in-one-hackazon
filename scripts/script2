@@ -1,0 +1,6 @@
+#!/bin/bash
+# 
+
+SECRET2_VALUE=RAND_INT
+
+echo "$SECRET2"
