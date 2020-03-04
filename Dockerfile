@@ -7,6 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server 
 RUN easy_install supervisor
 ADD ./scripts/start.sh /start.sh
 ADD ./scripts/xss_configuration.sh /xss_configuration.sh
+ADD ./scripts/script2.sh /script2.sh
 ADD ./vulnerabilities/xss_VULNERABILITIES.md /vulnerabilities/xss_VULNERABILITIES.md
 ADD ./vulnerabilities/xss_accountv1.php /vulnerabilities/xss_accountv1.php
 ADD ./vulnerabilities/xss_accountv2.php /vulnerabilities/xss_accountv2.php
@@ -58,6 +59,7 @@ RUN chown -R www-data:www-data /var/www/hackazon/web/upload
 RUN chown -R www-data:www-data /var/www/hackazon/assets/config
 RUN chmod 755 /start.sh
 RUN chmod 755 /xss_configuration.sh
+RUN chmod 755 /script2.sh
 RUN chmod 755 /restart_services.sh
 RUN chmod 755 /etc/apache2/foreground.sh
 RUN a2enmod rewrite 
