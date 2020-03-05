@@ -34,7 +34,7 @@ return array (
                     'XSS' => 
                     array (
                         'enabled' => true,
-                        'stored' => true,
+                        'stored' => false,
                     ),
                 ),
             ),
@@ -57,8 +57,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -115,7 +115,7 @@ return array (
                             'XSS' => 
                             array (
                                 'enabled' => true,
-                                'stored' => true,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -155,8 +155,8 @@ return array (
                             ),
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -227,7 +227,7 @@ return array (
                             ),
                             'XSS' => 
                             array (
-                                'enabled' => true,
+                                'enabled' => false,
                                 'stored' => true,
                             ),
                         ),
@@ -243,8 +243,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                         'children' => 
@@ -326,8 +326,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -342,8 +342,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -358,8 +358,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -374,7 +374,7 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
+                                'enabled' => false,
                                 'stored' => true,
                             ),
                         ),
@@ -390,8 +390,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),

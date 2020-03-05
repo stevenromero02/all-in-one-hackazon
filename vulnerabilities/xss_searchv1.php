@@ -1,4 +1,7 @@
 <?php
+#xss_searchv1 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'search',
     'type' => 'controller',
@@ -68,8 +71,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -84,8 +87,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -100,8 +103,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
@@ -116,8 +119,8 @@ return array (
                         array (
                             'XSS' => 
                             array (
-                                'enabled' => true,
-                                'stored' => true,
+                                'enabled' => false,
+                                'stored' => false,
                             ),
                         ),
                     ),
