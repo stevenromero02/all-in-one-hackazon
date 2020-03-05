@@ -1,4 +1,7 @@
 <?php
+#xss_checkoutv1 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'checkout',
     'type' => 'controller',

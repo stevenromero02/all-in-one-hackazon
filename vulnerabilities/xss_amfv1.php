@@ -1,4 +1,7 @@
 <?php
+#xss_amfv1 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'amf',
     'type' => 'application',

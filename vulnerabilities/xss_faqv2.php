@@ -1,4 +1,7 @@
 <?php
+#xss_faqv2 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'faq',
     'type' => 'controller',

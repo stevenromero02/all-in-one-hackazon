@@ -1,4 +1,7 @@
 <?php
+#xss_userv2 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'user',
     'type' => 'controller',

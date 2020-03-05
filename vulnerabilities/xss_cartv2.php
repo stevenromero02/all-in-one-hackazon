@@ -1,4 +1,7 @@
 <?php
+#xss_cartv2 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'cart',
     'type' => 'controller',

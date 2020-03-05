@@ -1,4 +1,7 @@
 <?php
+#xss_contactv3 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'contact',
     'type' => 'controller',

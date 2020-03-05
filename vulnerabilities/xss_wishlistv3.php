@@ -1,4 +1,7 @@
 <?php
+#xss_wishlistv3 Script
+#this script enable XSS in selected areas
+#
 return array (
     'name' => 'wishlist',
     'type' => 'controller',
