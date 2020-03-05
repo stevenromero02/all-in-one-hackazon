@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-
+#test scipt
 SECRET2_VALUE=RAND_INT
 
 cp /vulnerabilities/xss_VULNERABILITIES.md /var/www/hackazon/VULNERABILITIES.md
@@ -12,7 +12,7 @@ then
 	cp /vulnerabilities/xss_amfv1.php /var/www/hackazon/assets/config/vuln/amf.php
 	cp /vulnerabilities/xss_cartv1.php /var/www/hackazon/assets/config/vuln/cart.php
 	cp /vulnerabilities/xss_checkoutv4.php /var/www/hackazon/assets/config/vuln/checkout.php
-	cp /vulnerabilities/xss_faqv2.lphp /var/www/hackazon/assets/config/vuln/faq.php
+	cp /vulnerabilities/xss_faqv2.php /var/www/hackazon/assets/config/vuln/faq.php
 	cp /vulnerabilities/xss_userv3.php /var/www/hackazon/assets/config/vuln/user.php
 	cp /vulnerabilities/xss_wishlistv3.php /var/www/hackazon/assets/config/vuln/wishlist.php
 fi
