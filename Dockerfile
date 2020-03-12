@@ -65,5 +65,16 @@ RUN chmod 755 /etc/apache2/foreground.sh
 RUN a2enmod rewrite 
 RUN mkdir /var/log/supervisor/
 
+# Create ubuntu user and directories for Labtainer
+
+RUN useradd -d /home/ubuntu -m -s /bin/bash ubuntu
+RUN echo ubuntu:ubuntu | chpasswd
+RUN mkdir -p /home/ubuntu/.local/bin
+RUN mkdir -p /home/ubuntu/.local/zip
+
+# Change back to root
+
+USER root
+
 EXPOSE 80 443
 CMD ["/bin/bash", "/start.sh"]
