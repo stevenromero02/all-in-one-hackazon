@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql  php5-ldap unzip
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql  php5-ldap unzip systemd
 
 # setup hackazon
 RUN easy_install supervisor
@@ -71,6 +71,9 @@ RUN useradd -d /home/ubuntu -m -s /bin/bash ubuntu
 RUN echo ubuntu:ubuntu | chpasswd
 RUN mkdir -p /home/ubuntu/.local/bin
 RUN mkdir -p /home/ubuntu/.local/zip
+RUN mkdir -p /home/root/.local/bin
+RUN mkdir -p /home/root/.local/zip
+RUN mkdir -p /home/root/.local/result
 
 # Change back to root
 
