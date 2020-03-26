@@ -1,4 +1,4 @@
-FROM stevenromero02/hackazon-in-labtainer:latest
+FROM stevenromero02/hackazon-in-labtainer:base
 
 ADD ./scripts/xss_configuration.sh /xss_configuration.sh
 ADD ./vulnerabilities/xss_VULNERABILITIES.md /vulnerabilities/xss_VULNERABILITIES.md
