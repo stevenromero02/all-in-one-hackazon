@@ -83,4 +83,4 @@ EXPOSE 3000
 
 WORKDIR /opt/beef
 
-CMD ./beef
+CMD ["/bin/bash", "./beef"]
